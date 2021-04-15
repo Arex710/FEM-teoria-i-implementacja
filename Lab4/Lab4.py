@@ -1,0 +1,1 @@
+import numpy as npimport matplotlib.pyplot as pltdef generujTabliceGeometrii(x_0, x_p, n):    temp = (x_p - x_0) / (n - 1)    wezly = np.array([x_0])    for i in range(1, n, 1):        wezly = np.block([wezly, i * temp + x_0])    return wezlyprint(generujTabliceGeometrii(1,2,5))
